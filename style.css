@@ -1,0 +1,796 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Debugging purposes */
+    /* outline: 1px solid red;  */
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Navbar Construction */
+
+
+header {
+    display: grid;
+    grid-template-columns: repeat(1, 200px 1fr 200px);
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    padding: 0.75rem;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    
+}
+
+header nav {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.1rem;;
+    width: 100%;
+}
+
+header nav a {
+
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+    opacity: 80%;
+}
+
+.navbar-logo {
+    margin-left: 50px;
+    height: 1rem;
+    width: auto;
+    z-index: 1;
+}
+
+.nav-end {
+    margin-left: -20px;
+    display: flex;
+}
+
+.nav-end a img {
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 18px;
+}
+
+
+header nav a:hover {
+    color: #fff;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* Hero Section */
+/* ----------------------------------------------------------------------------------------------- */
+
+#hero {
+    grid-column: 1 / span 12;
+    margin-bottom: -40px;;
+}
+
+#hero a:hover {
+    color: #252525;
+    background-color: #ebeaea;
+}
+
+#hero video {
+    width: 100vw;
+}
+
+.video-overlay {
+    max-width: 30%;
+}
+
+.video-title {
+    display: flex;
+    position: relative;
+    max-width: 20vw;
+    top: -330px;
+    left: 625px;
+}
+
+.video-title img {
+    height: 3rem;
+    width: auto;
+}
+
+.video-title h1 {
+    font-size: 3rem;
+    color: #fff;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.video-desc {
+    font-size: medium;
+    position: relative;
+    max-width: 10vw;
+    top: -350px;
+    left: 690px;
+}
+
+.video-desc p {
+    max-width: 10vw;;
+    color: #fff;
+}
+
+.btn-hero {
+    position: relative;
+    top: -350px;
+    left: 680px;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 1.10rem;
+    color: #252525;
+    background-color: #fffefe;
+    border-radius: 25px;
+    opacity: 90%;
+    max-width: 10%;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* iPhone Titanium */
+/* ----------------------------------------------------------------------------------------------- */
+
+#iphone-titanium {
+    grid-column: 1 / span 12;
+    background: #000;
+    margin-top: -100px;
+    overflow: hidden;
+}
+
+#iphone-titanium img {
+    height: 500px;
+    width: 80vw;
+    margin-left: 350px;
+    object-fit: cover;
+}
+
+.iphone-titanium-header {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.iphone-titanium-header h1, p {
+    color: #fff;
+}
+
+.iphone-titanium-header h1 {
+    font-weight: 450;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.iphone-titanium-header p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.iphone-links a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* iPhone Camera */
+/* ----------------------------------------------------------------------------------------------- */
+
+#iphone-camera {
+    grid-column: 1 / span 12;
+    text-align: center;
+    background: #fff;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#iphone-camera img {
+    min-height: 700px;
+    max-height: 700px;
+    width: 100vw;
+}
+
+.iphone-camera-header {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.iphone-camera-header h1, p {
+    color: #1e1e1e;
+}
+
+.iphone-camera-header h1 {
+    font-weight: 450;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.iphone-camera-header p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* Products Grid */
+/* ----------------------------------------------------------------------------------------------- */
+
+#products {
+    display: grid;
+    grid-template:
+        "a b"
+        "c d"
+        "e f";
+        gap: 0.5rem;;
+}
+
+.product-icon-black {
+    margin-top: 0px;
+    height: 2rem;
+    width: auto;
+}
+
+.product-icon-white {
+    margin-top: 0px;
+    height: 2rem;
+    width: auto;
+}
+
+.product-image {
+    height: 500px;
+    min-width: 50vw;
+    max-width: 50vw;
+}
+
+
+
+
+
+/* ---------------- */
+/* Apple Vision Pro */
+/* ---------------- */
+
+.product-vision-pro {
+    grid-area: a;
+    background-color: #F7F7F7;
+}
+
+.product-vision-pro-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.product-vision-pro-header h1 {
+    font-weight: 450;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-vision-pro-header p {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.product-vision-pro-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-vision-pro-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-vision-pro-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ------------- */
+/* Apple Tradein */
+/* ------------- */
+
+.product-tradein {
+    grid-area: b;
+    background-color: #FFFFFF;
+}
+
+.product-tradein-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.product-tradein-header h1 {
+    font-weight: 450;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-tradein-header p {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    line-height: 0.5;
+}
+
+.product-tradein-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-tradein-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-tradein-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ---------- */
+/* Apple Card */
+/* ---------- */
+
+.product-card {
+    grid-area: c;
+    background-color: #FAFAFA;
+}
+
+.product-card-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.product-card-header h1 {
+    font-weight: 450;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-card-header p {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    line-height: 0.5;
+}
+
+.product-card-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-card-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-card-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ---------- */
+/* Apple Ipad */
+/* ---------- */
+
+.product-ipad {
+    grid-area: d;
+    background-color: #F5F5F7;
+}
+
+.product-ipad-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.product-ipad-header h1 {
+    color: #000;
+    font-weight: 450;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-ipad-header p {
+    color: #000;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.product-ipad-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-ipad-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-ipad-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ----------------- */
+/* Apple Macbook Pro */
+/* ----------------- */
+
+.product-macbook {
+    grid-area: e;
+    background-color: #000;
+}
+
+.product-macbook-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+
+.product-macbook-header h1 {
+    color: #fff;
+    font-weight: 450;
+    font-size: 2.5rem;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-macbook-header p {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.product-macbook-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-macbook-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-macbook-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* ----------- */
+/* Apple Watch */
+/* ----------- */
+
+.product-watch {
+    grid-area: f;
+    background-color: #000;
+}
+
+.product-watch-header {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.product-watch-header h1 {
+    color: #fff;
+    font-weight: 450;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    line-height: 1.0;
+    margin-left: 5px;
+}
+
+.product-watch-header p:first-of-type {
+    color: #D11717;
+    font-size: 1.0rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-watch-header p {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.product-watch-header .product-title {
+    display: flex;
+    justify-content: center;
+}
+
+.product-watch-header .product-links {
+    display: flex;
+    justify-content: center;
+}
+
+.product-watch-header a {
+    color: #2797FE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* --------- */
+/* Slideshow */
+/* --------- */
+#slideshow {
+    margin-top: 0.5rem;
+    grid-column: 1 / span 12;
+    overflow: hidden;
+}
+
+#slideshow .wrapper {
+    display: flex;
+    animation: slide 30s infinite;
+    width: 100vw;
+}
+
+#slideshow .wrapper img {
+    height: 700px;
+    width: auto;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+    16.66% { /* Adjusted for clarity and smooth transition */
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* Transition to the 2nd image */
+    33.32% {
+        transform: translateX(-100%);
+    }
+    /* Transition to the 3rd image */
+    49.98% {
+        transform: translateX(-200%);
+    }
+    /* Transition to the 4th image */
+    66.64% {
+        transform: translateX(-300%);
+    }
+    /* Transition to the 5th image */
+    83.3% {
+        transform: translateX(-400%);
+    }
+    /* Transition to the 6th (and last) image */
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+
+
+
+
+
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+#footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+    background-color: #F5F5F7;
+    padding: 0.5rem 0;
+}
+
+#footer .terms {
+    grid-column: 2 / span 10;
+    padding: 1rem 0;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+#footer .terms p {
+    color: #5A5A5B;
+}
+
+footer {
+    margin-top: -10px;
+    grid-column: 2 / span 10;
+    display: flex;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+footer nav div {
+    padding: 1rem;
+    min-width: 200px;
+}
+
+footer nav h1, footer nav ul li {
+    color: #5A5A5B;
+}
+
+footer nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+footer nav ul li {
+    margin-top: 5px;
+}
+
+footer ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps the text color the same as the li */
+    display: block; /* Makes the link fill the entire list item for easier clicking */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Adds an underline on hover for visual feedback */
+}
+
+footer .container #subfooter {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+}
+
+footer .container #subfooter #sub-footer-text {
+    grid-column: 1 / span 12;
+    margin-top: 30px;
+    max-width: fit-content;
+    margin-bottom: 15px;
+}
+
+footer .container #subfooter #sub-footer-text .text-link{
+    color: #2797FE;
+    text-decoration: underline;
+}
+
+footer .container #subfooter hr {
+    grid-column: 1 / span 12;
+}
+
+footer .container #subfooter #sub-footer-text p {
+    grid-column: 1 / span 5;
+    max-width: fit-content;
+    color: #5A5A5B;
+    margin: 0;
+}
+
+footer .container #subfooter p {
+    grid-column: 1 / span 3;
+    margin-top: 15px;;
+    color: #5A5A5B;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+footer .container #subfooter #sub-footer-links {
+    grid-column: 5 / span 5;
+    margin-top: 15px;
+}
+
+footer .container #subfooter #sub-footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .container #subfooter #sub-footer-links a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #5A5A5B;
+}
+
+footer .container #subfooter .sub-footer-country {
+    grid-column: 12 / span 1;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #5A5A5B;
+}
+
+footer .container #subfooter a:hover {
+    text-decoration: underline;
+}
